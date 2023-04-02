@@ -1,0 +1,55 @@
+<div mat-dialog-title>
+    Work Form
+</div>
+
+<form [formGroup]="workForm" (ngSubmit)="onSubmit()">
+    <div mat-dialog-content class="container">
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Company name</mat-label>
+                <input matInput placeholder="Company name" formControlName="companyName">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Company website</mat-label>
+                <input matInput placeholder="Company website" formControlName="companySite">
+            </mat-form-field>
+
+        </div>
+
+        <div class="upload-bttn">
+            <div layout-margin layout-padding>
+                <input class="ng-hide" id="input-file-id"  (change)="upload($event)" accept=".jpg, .jpeg, .png" type="file" />
+            </div>
+            <br>
+            <mat-form-field appearance="outline" style="display: none;">
+                <mat-label>Company logo</mat-label>
+                <textarea matInput placeholder="Company logo" formControlName = "imageURL"> </textarea>
+            </mat-form-field>
+        </div>
+
+        <div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>More info</mat-label>
+                <textarea matInput placeholder="More info" formControlName="additionalText"></textarea>
+            </mat-form-field>
+
+        </div>
+
+        <div>
+            <section>
+                <mat-checkbox formControlName = "hiddenStatus">Hidden</mat-checkbox>
+              </section>
+        </div>
+
+
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button type="submit" color="primary" class="bottom-button">{{data ? 'Update': 'Save'}}</button>
+        <button mat-raised-button mat-dialog-close class="bottom-button">Close</button>
+    </div>
+
+</form>

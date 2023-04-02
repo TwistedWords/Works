@@ -1,0 +1,89 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.toolar-bttn {
+  margin: 5px
+}
+
+.display-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.display-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 15px;
+  min-width: 300px;
+  max-width: 400px;
+  margin-bottom: 8px;
+  height: fit-content;
+}
+
+.card-add {
+  width: 300px;
+  height: 185px;
+  margin: 15px;
+  margin-bottom: 8px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+.sub-title {
+  max-width: 200px;
+  max-height: 150px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.infotext {
+  max-width: 500px;
+  margin-top: 20px;
+  max-height: 200px;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 875px) {
+  .container {
+    display: block;
+  }
+
+  .display-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .infotext {
+    max-width: 340px;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow: auto;
+    overflow-wrap: break-word;
+  }
+
+  .card {
+    margin: 15px;
+    width: 372px;
+    margin-bottom: 8px;
+    height: fit-content;
+  }
+}

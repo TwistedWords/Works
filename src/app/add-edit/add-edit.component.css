@@ -1,0 +1,27 @@
+.container {
+    padding-top: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.upload-bttn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.full-height {
+    min-height: 200px;
+    max-height: 380px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.bottom-button {
+    flex: auto;
+}
